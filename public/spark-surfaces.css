@@ -1,0 +1,38 @@
+:root{
+  --spark-surface-bg:linear-gradient(145deg,rgba(246,249,255,.96),rgba(210,222,248,.82));
+  --spark-surface-border:#aebfe6;
+  --spark-surface-shadow:0 14px 38px -30px rgba(33,34,196,.28);
+}
+
+/* Shared floating-surface system: only commercial/registration surfaces. */
+.tier,.pc,.card,.reg{
+  background:var(--spark-surface-bg) !important;
+  border:1px solid var(--spark-surface-border) !important;
+  box-shadow:var(--spark-surface-shadow) !important;
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
+
+/* Pricing is a set of floating cards, rather than one large container. */
+.tiers,.price{
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+  backdrop-filter:none !important;
+  padding:0 !important;
+}
+
+.tier,.pc{
+  border-color:#9bb1e2 !important;
+  box-shadow:0 12px 32px -27px rgba(33,34,196,.3) !important;
+}
+
+/* Preserve catalogue identity: no glass treatment on course/workshop cards. */
+.bc,.ws,.mcard{
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
+}
+
+@media (max-width:760px){
+  .tier,.pc,.card,.reg{border-radius:18px !important}
+}

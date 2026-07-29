@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SALES.thespark.ai · SPARK Sales Transformation</title>
+  <meta name="description" content="Spark מנתחת את שיחות המכירה הטובות ביותר שלכם ובונה Playbook, Copilot וסימולטור שמעלים את רמת הביצוע של כל הצוות.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="spark-surfaces.css">
+  <style>
+    :root{--ink:#0c0c10;--muted:#6d6d78;--line:#dce3f6;--blue:#2122c4;--blue2:#5b63de;--pale:#f3f6ff;--maxw:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:"Heebo",Arial,sans-serif;font-size:17px;line-height:1.6;background:#fff;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.07;letter-spacing:-.025em}h1{font-size:clamp(44px,7vw,82px);font-weight:700;max-width:13ch}h2{font-size:clamp(30px,4.4vw,52px);font-weight:700}h3{font-size:22px;font-weight:700}.eyebrow{font-size:12px;letter-spacing:.2em;color:var(--blue);font-weight:800;margin-bottom:18px}.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid transparent;border-radius:10px;padding:14px 25px;font:700 16px "Heebo",sans-serif;transition:transform .18s,background .18s}.btn:hover{transform:translateY(-2px)}.btn.primary{background:#fff;color:var(--ink)}.btn.secondary{background:var(--ink);color:#fff}.btn.outline{background:#fff;border-color:var(--blue);color:var(--blue)}
+    .nav{position:sticky;top:0;z-index:10;height:72px;background:rgba(255,255,255,.88);border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}.nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:9px;font-size:25px;font-weight:800;letter-spacing:-.05em}.dot{width:10px;height:10px;border-radius:50%;background:var(--blue)}.back{font-weight:700;color:#3a3a42;font-size:15px}.back:hover{color:var(--blue)}
+    .hero{position:relative;isolation:isolate;overflow:hidden;padding:120px 0 108px;background:#2122c4;color:#fff}.hero-video{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center}.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(20,22,116,.88) 0%,rgba(27,32,157,.74) 48%,rgba(21,24,91,.5) 100%),radial-gradient(ellipse at 15% 86%,rgba(91,99,222,.26),transparent 42%)}.hero .wrap{position:relative;z-index:1}.hero .eyebrow{color:#e7ebff}.hero .lead{max-width:52ch;font-size:clamp(19px,2.3vw,24px);margin:28px 0 34px;color:#fff}.cta{display:flex;gap:12px;flex-wrap:wrap}.micro{color:#e7ebff;font-size:14px;margin-top:15px}
+    section{padding:100px 0;border-top:1px solid var(--line)}.problem{background:#fff}.lead{max-width:56ch;font-size:clamp(18px,2.1vw,22px);color:#3a3a42}.metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}.metric{padding:28px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#fff,#f6f8ff)}.metric strong{display:block;color:var(--blue);font-size:clamp(36px,4vw,52px);line-height:1;margin-bottom:10px}.metric span{color:var(--muted);font-size:15px}.calculator{background:var(--pale)}.calc-shell{margin-top:42px;padding:30px;border:1px solid #aebfe6;border-radius:22px;background:linear-gradient(145deg,rgba(255,255,255,.95),rgba(210,222,248,.88));box-shadow:0 14px 38px -30px rgba(33,34,196,.28)}.calc-form{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-bottom:24px;border-bottom:1px solid #c9d4ee}.calc-form label{display:block;font-size:13px;font-weight:700;color:var(--muted);margin-bottom:8px}.calc-form input{width:100%;border:1px solid #b6c6e8;border-radius:12px;background:#fff;padding:13px 14px;color:var(--ink);font:500 17px "Heebo",sans-serif}.calc-form input:focus{outline:2px solid rgba(33,34,196,.24);border-color:var(--blue)}.calc-result{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;padding-top:25px}.calc-result strong{display:block;font-size:clamp(40px,5vw,64px);line-height:1;color:var(--blue);letter-spacing:-.04em;direction:ltr;text-align:right}.calc-result p{color:var(--muted);font-size:15px;margin-top:10px}.calc-note{font-size:13px;color:var(--muted);margin-top:22px}.research{margin-top:34px;border-right:3px solid var(--blue);padding:2px 18px;color:var(--muted);font-size:15px}.research b{color:var(--ink)}.research a{color:var(--blue);text-decoration:underline}.approach{background:var(--pale)}.split{display:grid;grid-template-columns:.86fr 1.14fr;gap:64px;align-items:start}.statement{font-size:clamp(24px,3vw,34px);font-weight:700;line-height:1.35}.phases{display:grid;gap:0}.phase{display:grid;grid-template-columns:56px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid #cfd9f1}.phase:last-child{border-bottom:0}.num{font-weight:800;color:var(--blue);font-size:15px;padding-top:3px}.phase p{margin-top:6px;color:var(--muted);font-size:15.5px}.outputs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}.output{padding:28px;border:1px solid var(--line);border-radius:18px;background:#fff}.output .kicker{display:block;color:var(--blue);font-size:13px;font-weight:800;margin-bottom:16px}.output p{color:var(--muted);font-size:15px;margin-top:10px}.final{text-align:center;background:#fff}.final h2{max-width:16ch;margin:0 auto 18px}.final .lead{margin:0 auto 30px}.wordmark{color:var(--blue);opacity:.1;font-weight:800;font-size:clamp(86px,22vw,260px);letter-spacing:-.08em;line-height:.75;margin-top:54px;user-select:none}footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}footer a:hover{color:var(--blue)}
+    @media(max-width:760px){.hero{padding:84px 0 78px}section{padding:72px 0}.metric-grid,.outputs,.calc-form{grid-template-columns:1fr}.calc-result{grid-template-columns:1fr;gap:14px}.calc-result .btn{width:100%}.split{grid-template-columns:1fr;gap:32px}.nav .back{font-size:13px}.phase{grid-template-columns:42px 1fr}.btn{width:100%}}
+  </style>
+</head>
+<body>
+  <nav class="nav"><div class="wrap">
+    <span class="brand"><span class="dot"></span>Spark</span>
+    <span class="back">SALES.thespark.ai</span>
+  </div></nav>
+
+  <header class="hero"><video class="hero-video" autoplay muted loop playsinline aria-hidden="true"><source src="assets/sales-rep-ai-coaching.mp4" type="video/mp4"></video><div class="wrap">
+    <div class="eyebrow">SPARK SALES TRANSFORMATION</div>
+    <h1>הנציגים הטובים שלכם כבר יודעים מה עובד.</h1>
+    <p class="lead">רק כ־5% מהנציגים שלכם מבצעים מכירות ברמה גבוהה באופן עקבי. אנחנו לומדים את השיחות שלהם, ממפים פרסונות ודפוסי קנייה, ומתרגמים את הידע הזה למערכת שמרימה את כל הצוות.</p>
+    <div class="cta"><a class="btn primary" href="#contact">קבעו שיחת אבחון</a><a class="btn secondary" href="#calculator">למחשבון ההשפעה</a></div>
+    <p class="micro">מניתוח שיחות ועד לשיפור מדיד בביצועי המכירה וב־ROI.</p>
+  </div></header>
+
+  <section class="problem"><div class="wrap">
+    <div class="eyebrow">הפער בביצועים</div>
+    <h2>מה המובילים עושים אחרת?</h2>
+    <p class="lead" style="margin-top:20px">ידע מכירתי קריטי נשאר בדרך כלל אצל הנציגים המצטיינים: איך הם פותחים שיחה, מה הם שואלים, מתי הם מתמודדים עם התנגדות ואיך הם מקדמים החלטה. אנחנו הופכים את הידע הזה לתהליך שניתן ללמד, למדוד ולשפר.</p>
+    <div class="metric-grid">
+      <article class="metric"><strong>שיחות</strong><span>מנתחים את מאגר השיחות והנתונים שכבר קיימים אצלכם.</span></article>
+      <article class="metric"><strong>דפוסים</strong><span>מזהים את מה שעובד לפי סוג לקוח, שלב במכירה והתנגדות.</span></article>
+      <article class="metric"><strong>תוצאה</strong><span>מייצרים שיפור דרמטי בביצועים, בשיעורי ההמרה וב־ROI.</span></article>
+    </div>
+  </div></section>
+
+  <section class="calculator" id="calculator"><div class="wrap">
+    <div class="eyebrow">מחשבון השפעה</div>
+    <h2>מה הערך של שיפור ביצועי הצוות?</h2>
+    <p class="lead" style="margin-top:18px">התחילו מההשערה העסקית: אם מצליחים לשפר רק חלק מהנציגים הבינוניים — מה המשמעות להכנסות שלכם?</p>
+    <div class="calc-shell">
+      <div class="calc-form">
+        <div><label for="reps">מספר נציגי מכירות</label><input id="reps" type="number" min="1" max="5000" value="80" inputmode="numeric"></div>
+        <div><label for="revenue">הכנסה חודשית ממוצעת לנציג (₪)</label><input id="revenue" type="number" min="0" value="50000" inputmode="numeric"></div>
+        <div><label for="uplift">שיפור צפוי אצל הנציגים שנבחרו (%)</label><input id="uplift" type="number" min="0" max="300" value="20" inputmode="numeric"></div>
+      </div>
+      <div class="calc-result"><div><div id="annualImpact"><strong>₪1,920,000</strong></div><p>פוטנציאל הכנסה שנתי נוסף אם נשפר 20% מהצוות. זהו אומדן לשיחת עבודה — לא תחזית או התחייבות.</p></div><a class="btn secondary" href="#contact">בדקו את הפוטנציאל אצלכם</a></div>
+    </div>
+    <div class="research"><b>מה המחקר מלמד:</b> מחקר של RAIN Group מצא שנציגים מובילים השיגו פי 2.7 יותר פגישות עם אנשי קשר יעד לעומת האחרים. מחקרי פרודוקטיביות מראים שנציגים מקדישים חלק מהשבוע לעבודה שאינה מכירה — ולכן יש ערך גם בהפיכת תובנות שיחה לפעולות מהירות.<br><a href="https://www.rainsalestraining.com/blog/sales-prospecting" target="_blank" rel="noopener">RAIN Group: Top Performance in Sales Prospecting</a> · <a href="https://www.forrester.com/resources/sales-productivity/how-reps-spend-time/" target="_blank" rel="noopener">Forrester: How reps spend time</a></div>
+  </div></section>
+
+  <section class="approach" id="process"><div class="wrap">
+    <div class="eyebrow">התהליך</div>
+    <div class="split">
+      <div class="statement">לא עוד הכשרה גנרית. מערכת מכירות שנבנית סביב מה שהצוות שלכם צריך לומר ולעשות — בכל שיחה.</div>
+      <div class="phases">
+        <article class="phase"><div class="num">01</div><div><h3>ניתוח מאגרי מידע ויצירת Playbook מכירות</h3><p>ניתוח שיחות, עסקאות, פרסונות וידע פנימי כדי לבנות תהליך מכירה ברור, התנגדויות, מסרים והמלצות פעולה.</p></div></article>
+        <article class="phase"><div class="num">04</div><div><h3>ניתוח אישי של שיחת עובד</h3><p>מערכת אחת שמנתחת את השיחה בזמן אמת, מזהה מה קרה בכל שלב ובסיום מעניקה לנציג ציון, משוב והמלצות מדויקות לשיפור.</p></div></article>
+        <article class="phase"><div class="num">03</div><div><h3>מסד נתונים לשיפור עובדים</h3><p>שכבת ידע חיה שמרכזת שיחות, תובנות, כשלים והצלחות, כך שהניהול וההדרכה מבוססים על אמת ולא על תחושת בטן.</p></div></article>
+        <article class="phase"><div class="num">02</div><div><h3>Copilot למכירות</h3><p>עוזר AI שמלווה את הנציג לפני, במהלך ואחרי השיחה — עם הכנה מותאמת ללקוח, הצעות לשאלות וסיכום פעולה.</p></div></article>
+      </div>
+    </div>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="eyebrow">מה מקבלים</div>
+    <h2>מערכת שמייצרת שיפור שנשאר בארגון</h2>
+    <div class="outputs">
+      <article class="output"><span class="kicker">PLAYBOOK</span><h3>תהליך מכירה אחיד</h3><p>מסרים, שאלות, שלבי שיחה והנחיות להתמודדות עם התנגדויות — מבוססי נתונים מהשטח.</p></article>
+      <article class="output"><span class="kicker">COACHING</span><h3>ליווי מדויק לנציגים</h3><p>משוב והכוונה שמבוססים על ביצועים אמיתיים, לא על סיסמאות או תסריט כללי.</p></article>
+      <article class="output"><span class="kicker">ROI</span><h3>מדידה ברורה</h3><p>מחברים בין התנהגות בשיחה לתוצאות: שיפור המרות, קיצור זמן עסקה והגדלת ערך לקוח.</p></article>
+    </div>
+  </div></section>
+
+  <section class="final" id="contact"><div class="wrap">
+    <div class="eyebrow">בואו נתחיל</div>
+    <h2>הפכו את הידע של המובילים שלכם ליתרון של כל הצוות.</h2>
+    <p class="lead">בשיחת האבחון נבדוק מה כבר קיים אצלכם, מה אפשר לנתח ואיפה נמצא הפוטנציאל הגדול ביותר לשיפור.</p>
+    <a class="btn secondary" href="mailto:amichai@thespark.ai?subject=SPARK%20Sales%20Transformation">דברו איתנו</a>
+    <div class="wordmark">SPARK</div>
+  </div></section>
+  <footer><div class="wrap"><span>SALES.thespark.ai · Spark Sales Transformation</span><a href="mailto:amichai@thespark.ai">amichai@thespark.ai</a></div></footer>
+  <script>
+    (function(){
+      var reps=document.getElementById('reps'), revenue=document.getElementById('revenue'), uplift=document.getElementById('uplift'), out=document.getElementById('annualImpact');
+      function number(v){return Math.max(0,Number(v)||0)}
+      function calculate(){
+        var improved=Math.max(1,Math.round(number(reps.value)*.2));
+        var amount=Math.round(improved*number(revenue.value)*(number(uplift.value)/100)*12);
+        out.innerHTML='<strong>₪'+amount.toLocaleString('en-US')+'</strong>';
+      }
+      [reps,revenue,uplift].forEach(function(el){el.addEventListener('input',calculate)}); calculate();
+    })();
+  </script>
+  <script src="aifx-cleanup.js" defer></script>
+</body>
+</html>
